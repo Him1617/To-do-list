@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 30px;
+    padding: 30px 20px 60px ;
+    background-color: white;
+    border-radius: 10px;
+}
+.todo-app h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 15px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e0e0e0;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+   
+}
+input{
+    flex: 1;
+   font-weight: 14px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+
+}
+button { 
+    outline: none;
+    border: none;
+    background: #ff5945;
+    padding:15px 50px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(OIP.jpeg);
+    background-size: cover;
+    background-position: center;
+    left: 22px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(tick.png);
+}
+ul li span{
+    position: absolute;
+    right: 0px;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 5px;
+    color: #153677;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+ul li span:hover{
+    background-color: #c90000;
+}
